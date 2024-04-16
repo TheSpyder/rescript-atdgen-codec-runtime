@@ -1,11 +1,7 @@
 {
   "name": "rescript-atdgen-codec-runtime",
   "namespace": false,
-  "version": "2.0.1",
-  "bsc-flags": [
-    "-bs-no-version-header",
-    "-bs-super-errors"
-  ],
+  "version": "0.1.0",
   "sources": [
     {
       "dir": "src"
@@ -20,13 +16,11 @@
     "in-source": false
   },
   "suffix": ".bs.js",
-  "bs-dependencies": [
-    "@glennsl/bs-json"
-  ],
   "bs-dev-dependencies": [
     "@glennsl/bs-jest"
   ],
   "warnings": {
-    "error": "+101"
-  }
+    "number": "A-4-40-41-42-43+101-102"
+  },
+  "uncurried": false
 }

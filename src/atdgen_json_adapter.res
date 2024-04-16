@@ -12,11 +12,12 @@ module Type_field = {
   module Make = (Param: Param): S => {
     open Param
 
-    let normalize = (json: Js.Json.t) =>
+    let normalize = json =>
       switch json |> Js.Json.classify {
       | JSONObject(obj) =>
         switch Js.Dict.get(obj, type_field_name) {
         | Some(type_) =>
+          // this makes an array with the type field name as the first element
           let normalized: Js.Json.t = Obj.magic((type_, json))
           normalized
         | None => json
@@ -26,11 +27,12 @@ module Type_field = {
 
     let restore = json =>
       switch json |> Js.Json.classify {
+      // pulls the type out of the array and returns the object with the type set
       | JSONArray([v, o]) if Js.typeof(v) == "string" =>
         switch o |> Js.Json.classify {
         | JSONObject(obj) =>
           Js.Dict.set(obj, type_field_name, v)
-          Json_encode.jsonDict(obj)
+          Js.Json.object_(obj)
         | _ => json
         }
       | _ => json

@@ -1,9 +1,7 @@
 # rescript-atdgen-codec-runtime
 
 `rescript-atdgen-codec-runtime` is a ReScript runtime for
-[atdgen](https://github.com/ahrefs/atd), a code-generation tool for JSON handling. It is based on the json type
-provided by ReScript and combinators of
-[@glennsl/bs-json](https://github.com/glennsl/bs-json).
+[atdgen](https://github.com/ahrefs/atd), a code-generation tool for JSON handling. It is based on the direct json types of ReScript.
 
 ## Installation
 
@@ -14,7 +12,7 @@ yarn add rescript-atdgen-codec-runtime
 This package doesn't take care of running `atdgen` to derive code from type definitions. For that, you need to [`rescript-atdgen-generator`](https://github.com/TheSpyder/rescript-atdgen-generator) to generate the `.ml` and `.mli` files from `.atd` sources.
 
 ## A note about ReScript 11
-The `atd` code-generation project is an OCaml tool, and generates OCaml files. As such it does not support uncurried mode. The ahrefs team is open to a contribution that generates ReScript instead, but so long as this project only has one user that doesn't seem worth the effort. For more information and to add your voice to the discussion please follow the github issue (TODO).
+`atd` is an OCaml tool, and generates OCaml files. ReScript still supports compiling OCaml, but the `atd` generated code does not support uncurried mode. The ahrefs team is open to a contribution that generates ReScript instead, if someone is up for the task. For more information and to add your voice to the discussion please follow the github issue (TODO).
 
 ## Usage
 

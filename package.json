@@ -24,10 +24,10 @@
   },
   "devDependencies": {
     "@glennsl/bs-jest": "^0.7.0",
-    "rescript": "^9.1.4",
+    "rescript": "^10.0.0",
     "rescript-atdgen-generator": "^0.1.1"
   },
-  "dependencies": {
-    "@glennsl/bs-json": "^5.0.0"
-  }
+  "contributors": [
+    "Ahrefs <louis.roche@ahrefs.com>"
+  ]
 }

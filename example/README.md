@@ -10,7 +10,7 @@ bucklescript](https://tech.ahrefs.com/getting-started-with-atdgen-and-bucklescri
 esy
 yarn
 yarn build
-```
+```cd
 
 ## Run it
 

@@ -8,4 +8,7 @@ yarn-debug.log*
 yarn-error.log*
 *.bs.js
 
-_esy
+*_t.ml
+*_t.mli
+*_bs.ml
+*_bs.mli

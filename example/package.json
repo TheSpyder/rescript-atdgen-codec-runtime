@@ -1,19 +1,17 @@
 {
-  "name": "demo-bs-atdgen",
+  "name": "demo-rescript-atdgen",
   "version": "0.0.1",
-  "description": "demo of atdgen with bucklescript",
+  "description": "demo of atdgen with rescript",
   "scripts": {
-    "clean": "bsb -clean-world",
-    "build": "bsb -make-world",
-    "watch": "bsb -make-world -w"
+    "clean": "rescript clean",
+    "build": "rescript",
+    "watch": "rescript build -w"
   },
   "devDependencies": {
-    "bs-platform": ">= 7.0.0"
-  },
-  "peerDependencies": {
-    "bs-platform": ">= 7.0.0"
+    "rescript": "^10",
+    "rescript-atdgen-generator": "^0.1.1"
   },
   "dependencies": {
-    "@ahrefs/bs-atdgen-codec-runtime": "file:../"
+    "rescript-atdgen-codec-runtime": "file:../"
   }
 }

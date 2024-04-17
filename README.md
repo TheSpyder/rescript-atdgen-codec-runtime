@@ -1,37 +1,32 @@
-# bs-atdgen-codec-runtime
+# rescript-atdgen-codec-runtime
 
-`bs-atdgen-codec-runtime` is a bucklescript runtime for
-[atdgen](https://github.com/ahrefs/atd). It is based on the json type
-provided by bucklescript and combinators of
+`rescript-atdgen-codec-runtime` is a ReScript runtime for
+[atdgen](https://github.com/ahrefs/atd), a code-generation tool for JSON handling. It is based on the json type
+provided by ReScript and combinators of
 [@glennsl/bs-json](https://github.com/glennsl/bs-json).
 
 ## Installation
 
 ```
-yarn add @ahrefs/bs-atdgen-codec-runtime
+yarn add rescript-atdgen-codec-runtime
 ```
 
-This package doesn't take care of running atdgen to derive code from
-type definitions. This step requires the `atdgen` binary which can be
-obtained using [opam](https://opam.ocaml.org/) or [esy](https://esy.sh/).
+This package doesn't take care of running `atdgen` to derive code from type definitions. For that, you need to [`rescript-atdgen-generator`](https://github.com/TheSpyder/rescript-atdgen-generator) to generate the `.ml` and `.mli` files from `.atd` sources.
 
-Alternatively, if your project is using BuckleScript exclusively (i.e. not using native OCaml or Reason in the backend),
-you might consider using [`bs-atdgen-generator`](https://github.com/jchavarri/bs-atdgen-generator) in combination with
-this runtime library, in order to generate the `.ml` and `.mli` files from `.atd` sources without having to use native
-package managers like `esy` or `opam`.
+## A note about ReScript 11
+The `atd` code-generation project is an OCaml tool, and generates OCaml files. As such it does not support uncurried mode. The ahrefs team is open to a contribution that generates ReScript instead, but so long as this project only has one user that doesn't seem worth the effort. For more information and to add your voice to the discussion please follow the github issue (TODO).
 
 ## Usage
 
-Add `@ahrefs/bs-atdgen-codec-runtime` to the `bs-dependencies` of
-`bsconfig.json`.
+Add `rescript-atdgen-generator` to the `bs-dependencies` of `bsconfig.json`.
 
-To write atd type definitions, please have a look at the [great atd
-documentation](https://atd.readthedocs.io/en/latest/).
+To write atd type definitions, please have a look at the [atd documentation](https://atd.readthedocs.io/en/latest/).
 
 ## Simple example
 
-Reason code to query and deserialize the response of a REST API. It
-requires `bs-fetch`.
+Reason code to query and deserialize the response of a REST API using the `meetup.atd` file in `example/src`. It requires `bs-fetch`.
+
+(TODO: rewrite in ReScript with either rescript-webapi or rescript-fetch)
 
 ```
 let get = (url, decode) =>
@@ -53,9 +48,12 @@ let v: Meetup_t.events =
 
 ## Full example
 
-The [example](example) directory contains a full example of a simple
-cli to read and write data in a JSON file.
+The [example](example) directory contains a full example of a simple cli to read and write data in a JSON file.
 
-For a complete introduction from atdgen installation to json
-manipulation, please refer to [Getting started with atdgen and
-bucklescript](https://tech.ahrefs.com/getting-started-with-atdgen-and-bucklescript-1f3a14004081).
+For a complete introduction from atdgen installation to json manipulation, please refer to [Getting started with atdgen and melange](https://tech.ahrefs.com/getting-started-with-atdgen-and-bucklescript-1f3a14004081). The article talks about melange a lot, which isn't relevant, but it does still serve as a good introduction to `atd` syntax.
+
+## License and Credits
+
+All code is licensed as MIT. See [LICENSE](LICENSE).
+
+This project was forked from [@ahrefs/bs-atdgen-codec-runtime](https://github.com/ahrefs/bs-atdgen-codec-runtime). That project has now migrated to melange, I made a copy of the commit I forked from [here](https://github.com/thespyder/bs-atdgen-codec-runtime).

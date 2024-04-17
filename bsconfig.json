@@ -1,5 +1,5 @@
 {
-  "name": "@ahrefs/bs-atdgen-codec-runtime",
+  "name": "rescript-atdgen-codec-runtime",
   "namespace": false,
   "version": "2.0.1",
   "bsc-flags": [
@@ -17,7 +17,7 @@
   ],
   "package-specs": {
     "module": "commonjs",
-    "in-source": true
+    "in-source": false
   },
   "suffix": ".bs.js",
   "bs-dependencies": [

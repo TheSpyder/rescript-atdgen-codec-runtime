@@ -2,17 +2,22 @@
 # yarn lockfile v1
 
 
-"@ahrefs/bs-atdgen-codec-runtime@file:..":
-  version "2.0.1"
-  dependencies:
-    "@glennsl/bs-json" "^5.0.0"
-
 "@glennsl/bs-json@^5.0.0":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@glennsl/bs-json/-/bs-json-5.0.1.tgz#b19d0b45f4a80d52e6bfefa032ac99f4548f3083"
   integrity sha512-tDxqeO4LCUz3HIwsdqyM4OIUk/bIV8QwDuhNbqy3hHIVEciePbJXTSyXMKsoIFs3ukQY8ZsQXskONtOK4TyLfA==
 
-"bs-platform@>= 7.0.0":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-7.0.1.tgz#1d7b0ef6088b998dceee5db74a7cd8f01c20a3bd"
-  integrity sha512-UjStdtHhbtC/l6vKJ1XRDqrPk7rFf5PLYHtRX3akDXEYVnTbN36z0g4DEr5mU8S0N945e33HYts9x+i7hKKpZQ==
+"rescript-atdgen-codec-runtime@file:..":
+  version "0.1.0"
+  dependencies:
+    "@glennsl/bs-json" "^5.0.0"
+
+rescript-atdgen-generator@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/rescript-atdgen-generator/-/rescript-atdgen-generator-0.1.1.tgz#b0145b1d65c05a0a32f9c8691094219172093db5"
+  integrity sha512-sV9BRpAAa6Afd7S5aJS9sjQhxMnW0CDutoKxTZosyk8W1Y/M3GKHygzWhmpt3iZWz63HM08jB5e1W4jBMidzJQ==
+
+rescript@^10:
+  version "10.1.4"
+  resolved "https://registry.yarnpkg.com/rescript/-/rescript-10.1.4.tgz#0f37710d371f32a704f17b4e804f66ce3c79a305"
+  integrity sha512-FFKlS9AG/XrLepWsyw7B+A9DtQBPWEPDPDKghV831Y2KGbie+eeFBOS0xtRHp0xbt7S0N2Dm6hhX+kTZQ/3Ybg==

@@ -23,7 +23,7 @@
     "generate-tests": "cd __tests__ && npx atdgen -t test.atd && npx atdgen -bs test.atd"
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.7.0",
+    "@glennsl/rescript-jest": "^0.10.0",
     "rescript": "^10.0.0",
     "rescript-atdgen-generator": "^0.1.1"
   },

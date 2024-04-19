@@ -8,7 +8,7 @@ let run_test = (~name, ~write, ~read, ~data) => {
   let decode = Atdgen_codec_runtime.Decode.decode(read)
   let json = encode(data)
   let data' = decode(json)
-  test(name, () => expect(data) |> toEqual(data'))
+  test(name, () => expect(data)->toEqual(data'))
 }
 
 let () = describe("roundtrip tests", () => {

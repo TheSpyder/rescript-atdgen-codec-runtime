@@ -4,7 +4,7 @@ let run_decode_test = (~name, ~read, ~data, ~expected) => {
   open Expect
   let decode = Atdgen_codec_runtime.Decode.decode(read)
   let data' = decode(data)
-  test(name, () => expect(data') |> toEqual(expected))
+  test(name, () => expect(data')->toEqual(expected))
 }
 
 @ocaml.doc("

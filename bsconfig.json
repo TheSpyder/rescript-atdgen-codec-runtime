@@ -17,7 +17,7 @@
   },
   "suffix": ".bs.js",
   "bs-dev-dependencies": [
-    "@glennsl/bs-jest"
+    "@glennsl/rescript-jest"
   ],
   "warnings": {
     "number": "A-4-40-41-42-43+101-102"

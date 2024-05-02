@@ -9,10 +9,10 @@
 yarn add rescript-atdgen-codec-runtime
 ```
 
-This package doesn't take care of running `atdgen` to derive code from type definitions. For that, you need to [`rescript-atdgen-generator`](https://github.com/TheSpyder/rescript-atdgen-generator) to generate the `.ml` and `.mli` files from `.atd` sources.
+This package doesn't include running `atdgen` to derive code from type definitions. For that, you need [`rescript-atdgen-generator`](https://github.com/TheSpyder/rescript-atdgen-generator) to generate the `.ml` and `.mli` files from `.atd` sources.
 
 ## A note about ReScript 11
-`atd` is an OCaml tool, and generates OCaml files. ReScript still supports compiling OCaml, but the `atd` generated code does not support uncurried mode. The ahrefs team is open to a contribution that generates ReScript instead, if someone is up for the task. For more information and to add your voice to the discussion please follow the github issue (TODO).
+`atd` is an OCaml tool, and generates OCaml files. ReScript still supports compiling OCaml, but the `atd` generated code does not support uncurried mode. The ahrefs team is open to a contribution that generates ReScript instead, if someone is up for the task. For more information and to add your voice to the discussion please follow [this github issue](https://github.com/ahrefs/atd/issues/410).
 
 ## Usage
 
@@ -22,11 +22,11 @@ To write atd type definitions, please have a look at the [atd documentation](htt
 
 ## Simple example
 
-Reason code to query and deserialize the response of a REST API using the `meetup.atd` file in `example/src`. It requires `bs-fetch`.
+ReasonML code to query and deserialize the response of a REST API using the `meetup.atd` file in `example/src`. It requires `bs-fetch`.
 
 (TODO: rewrite in ReScript with either rescript-webapi or rescript-fetch)
 
-```
+```reason
 let get = (url, decode) =>
   Js.Promise.(
     Fetch.fetchWithInit(
@@ -46,7 +46,7 @@ let v: Meetup_t.events =
 
 ## Full example
 
-The [example](example) directory contains a full example of a simple cli to read and write data in a JSON file.
+The [example](example) directory contains a full example of a simple cli to read and write data in a JSON file. It is written in OCaml, contributions to rewrite it in ReScript (the syntax swap is a one-line shell command, the style needs a bit more work) would be welcome.
 
 For a complete introduction from atdgen installation to json manipulation, please refer to [Getting started with atdgen and melange](https://tech.ahrefs.com/getting-started-with-atdgen-and-bucklescript-1f3a14004081). The article talks about melange a lot, which isn't relevant, but it does still serve as a good introduction to `atd` syntax.
 

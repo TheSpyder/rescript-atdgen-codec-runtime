@@ -27,6 +27,10 @@
     "rescript": "^10.0.0",
     "rescript-atdgen-generator": "^0.1.1"
   },
+  "files": [
+    "bsconfig.json",
+    "src"
+  ],
   "contributors": [
     "Ahrefs <louis.roche@ahrefs.com>"
   ],

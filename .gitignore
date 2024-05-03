@@ -7,8 +7,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 *.bs.js
+*.mjs
+.merlin
 
 *_t.ml
 *_t.mli
 *_bs.ml
 *_bs.mli
+rescript-atdgen-codec-runtime-*.tgz

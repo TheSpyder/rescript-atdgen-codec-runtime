@@ -12,10 +12,10 @@
     }
   ],
   "package-specs": {
-    "module": "commonjs",
-    "in-source": false
+    "module": "es6",
+    "in-source": true
   },
-  "suffix": ".bs.js",
+  "suffix": ".mjs",
   "bs-dev-dependencies": [
     "@glennsl/rescript-jest"
   ],

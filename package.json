@@ -17,7 +17,7 @@
   "scripts": {
     "prepublishOnly": "yarn test",
     "clean": "rescript clean",
-    "build": "yarn generate-tests && rescript",
+    "build": "yarn generate-tests && rescript build -with-deps",
     "watch": "rescript build -w",
     "test": "yarn build && node node_modules/.bin/jest lib/js/__tests__/*_test.bs.js",
     "generate-tests": "cd __tests__ && yarn exec atdgen -t test.atd && yarn exec atdgen -bs test.atd"
@@ -34,5 +34,5 @@
   "contributors": [
     "Ahrefs <louis.roche@ahrefs.com>"
   ],
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.2.1+sha512.4326f6a5a916363bfd3533f984bc4c91d47a0c6af2d79fc6e8a25dec14a1be88ec354e2b1d2919461647ec8df1d39303575f7726827704cdf9909d38621c9300"
 }
